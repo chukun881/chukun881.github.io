@@ -24,4 +24,5 @@ function calculateSalary() {
   document.getElementById('totalAllowance').textContent = `${totalAllowance.toFixed(2)} ( ${allowancePerDay} × ${numDays} )`;
   document.getElementById('totalSalary').textContent = `${totalSalary.toFixed(2)}`;
   document.getElementById('balance').textContent = `${balance.toFixed(2)} ( ${totalSalary.toFixed(2)} - ${advance} )`;
+  document.getElementById('advanceTaken').textContent = `${advance.toFixed(2)}`;
 }
