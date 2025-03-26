@@ -1,2 +1,3 @@
-# chukun881.github.io
-testing
+# Salary Calculator
+A simple salary calculator.
+https://chukun881.github.io/
