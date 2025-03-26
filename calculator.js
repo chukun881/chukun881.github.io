@@ -22,11 +22,12 @@ function calculateSalary() {
 
   // Update UI
   document.getElementById('salaryForDays').textContent = `${salaryPerDay} days × ${numDays} = ${salaryForDays.toFixed(2)}`;
-  document.getElementById('salaryForHours').textContent = `${numHours} hours × ${salaryPerHour} = ${salaryForHours.toFixed(2)}`;
-  document.getElementById('salaryForSunday').textContent = `${salaryForSunday.toFixed(2)} ( ${sundayHours} × ${sundayPayRate} )`;
-  document.getElementById('salaryForOT').textContent = `${salaryForOT.toFixed(2)} ( ${otHours} × ${otPayRate} )`;
-  document.getElementById('totalAllowance').textContent = `${totalAllowance.toFixed(2)} ( ${allowancePerDay} × ${numDays} )`;
+  document.getElementById('salaryForHours').textContent = `${numHours} hrs × ${salaryPerHour} = ${salaryForHours.toFixed(2)}`;
+  document.getElementById('salaryForSunday').textContent = `Sunday ${sundayHours} hrs × ${sundayPayRate} = ${salaryForSunday.toFixed(2)}`;
+  document.getElementById('salaryForOT').textContent = `${otHours} hrs × ${otPayRate} = ${salaryForOT.toFixed(2)}`;
+  document.getElementById('totalAllowance').textContent = `${numDays} days × ${allowancePerDay} = ${totalAllowance.toFixed(2)}`; 
   document.getElementById('totalSalary').textContent = `${totalSalary.toFixed(2)}`;
-  document.getElementById('balance').textContent = `${balance.toFixed(2)} ( ${totalSalary.toFixed(2)} - ${advance} )`;
   document.getElementById('advanceTaken').textContent = `${advance.toFixed(2)}`;
+  document.getElementById('balance').textContent = `${balance.toFixed(2)} ( ${totalSalary.toFixed(2)} - ${advance} )`;
+  
 }
