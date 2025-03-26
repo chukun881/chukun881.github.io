@@ -17,8 +17,8 @@ function calculateSalary() {
   const balance = totalSalary - advance;
 
   // Update UI
-  document.getElementById('salaryForDays').textContent = `${salaryForDays.toFixed(2)} ( ${salaryPerDay} × ${numDays} )`;
-  document.getElementById('salaryForHours').textContent = `${salaryForHours.toFixed(2)} ( ${numHours} × (${salaryPerDay} ÷ 8) )`;
+  document.getElementById('salaryForDays').textContent = `${salaryPerDay} days × ${numDays} = ${salaryForDays.toFixed(2)}`;
+  document.getElementById('salaryForHours').textContent = `${numHours} hours × (${salaryPerDay} ÷ 8) = ${salaryForHours.toFixed(2)}`;
   document.getElementById('salaryForSunday').textContent = `${salaryForSunday.toFixed(2)} ( ${sundayHours} × ${salaryPerDay} × 2 )`;
   document.getElementById('salaryForOT').textContent = `${salaryForOT.toFixed(2)} ( ${otHours} × ((${salaryPerDay} ÷ 8) × 1.5) )`;
   document.getElementById('totalAllowance').textContent = `${totalAllowance.toFixed(2)} ( ${allowancePerDay} × ${numDays} )`;
