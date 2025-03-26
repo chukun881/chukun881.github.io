@@ -7,33 +7,21 @@ function calculateSalary() {
   const allowancePerDay = parseFloat(document.getElementById('allowancePerDay').value) || 0;
   const advance = parseFloat(document.getElementById('advance').value) || 0;
 
-  // 1. Salary for Number of Days
+  // Calculations
   const salaryForDays = salaryPerDay * numDays;
-
-  // 2. Salary for Hours Worked (Salary Per Hour = Salary Per Day / 8)
   const salaryForHours = numHours * (salaryPerDay / 8);
-
-  // 3. Salary for Sunday Hours (Double the Salary Per Hour)
   const salaryForSunday = sundayHours * salaryPerDay * 2;
-
-  // 4. Salary for OT Hours (1.5x Salary Per Hour)
   const salaryForOT = otHours * ((salaryPerDay / 8) * 1.5);
-
-  // 5. Allowance Total
   const totalAllowance = allowancePerDay * numDays;
-
-  // 6. Total Salary
   const totalSalary = salaryForDays + salaryForHours + salaryForSunday + salaryForOT + totalAllowance;
-
-  // 7. Balance after Advance
   const balance = totalSalary - advance;
 
-  // Update the UI with calculated values
-  document.getElementById('salaryForDays').textContent = salaryForDays.toFixed(2);
-  document.getElementById('salaryForHours').textContent = salaryForHours.toFixed(2);
-  document.getElementById('salaryForSunday').textContent = salaryForSunday.toFixed(2);
-  document.getElementById('salaryForOT').textContent = salaryForOT.toFixed(2);
-  document.getElementById('totalAllowance').textContent = totalAllowance.toFixed(2);
-  document.getElementById('totalSalary').textContent = totalSalary.toFixed(2);
-  document.getElementById('balance').textContent = balance.toFixed(2);
+  // Update UI
+  document.getElementById('salaryForDays').textContent = `${salaryForDays.toFixed(2)} ( ${salaryPerDay} × ${numDays} )`;
+  document.getElementById('salaryForHours').textContent = `${salaryForHours.toFixed(2)} ( ${numHours} × (${salaryPerDay} ÷ 8) )`;
+  document.getElementById('salaryForSunday').textContent = `${salaryForSunday.toFixed(2)} ( ${sundayHours} × ${salaryPerDay} × 2 )`;
+  document.getElementById('salaryForOT').textContent = `${salaryForOT.toFixed(2)} ( ${otHours} × ((${salaryPerDay} ÷ 8) × 1.5) )`;
+  document.getElementById('totalAllowance').textContent = `${totalAllowance.toFixed(2)} ( ${allowancePerDay} × ${numDays} )`;
+  document.getElementById('totalSalary').textContent = `${totalSalary.toFixed(2)}`;
+  document.getElementById('balance').textContent = `${balance.toFixed(2)} ( ${totalSalary.toFixed(2)} - ${advance} )`;
 }
