@@ -40,11 +40,11 @@ label {
 }
 
 input[type="number"] {
-  width: 100%;
-  padding: 12px;
+  width: 80%;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 14px;
   transition: border 0.3s ease-in-out;
 }
 
