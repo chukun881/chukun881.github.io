@@ -14,7 +14,7 @@ function calculateSalary() {
   // Calculations
   const salaryForDays = salaryPerDay * numDays;
   const salaryForHours = numHours * (salaryPerDay / 8);
-  const salaryForSunday = sundayHours * salaryPerDay * 2;
+  const salaryForSunday = sundayHours * ((salaryPerDay /8)* 2);
   const salaryForOT = otHours * ((salaryPerDay / 8) * 1.5);
   const totalAllowance = allowancePerDay * numDays;
   const totalSalary = salaryForDays + salaryForHours + salaryForSunday + salaryForOT + totalAllowance;
